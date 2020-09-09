@@ -2,15 +2,6 @@ const express = require('express');
 const db = require('../data/dbConfig.js');
 const router = express.Router();
 
-// const knex = require('knex');
-// const db = knex({
-//     client: 'sqlite3',
-//     connection: {
-//         filename: './data/cars-dealer.db3'
-//     },
-//     useNullAsDefault: true
-// });
-
 router.get('/', (req, res) => {
   db('cars')
   .then(cars => {
